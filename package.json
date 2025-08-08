@@ -1,5 +1,8 @@
 {
+  "scripts": {
+    "test": "npx cypress run --spec 'cypress/e2e/login.cy.js'"
+  },
   "dependencies": {
-    "selenium-webdriver": "^4.34.0"
+    "cypress": "^14.5.4"
   }
 }
