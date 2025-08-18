@@ -1,0 +1,260 @@
+[
+  {
+    "description": "  As a user\n  I want to manage items in my cart",
+    "elements": [
+      {
+        "description": "",
+        "id": "shopping-cart-management;add-item-to-cart",
+        "keyword": "Scenario",
+        "line": 8,
+        "name": "Add item to cart",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 741299900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "I am logged in as \"standard_user\"",
+            "match": {
+              "location": "features\\steps\\cart.steps.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3903485199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 9,
+            "name": "I add the \"Sauce Labs Backpack\" to cart",
+            "match": {
+              "location": "features\\steps\\cart.steps.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 24046299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 10,
+            "name": "the cart badge should show \"1\"",
+            "match": {
+              "location": "features\\steps\\cart.steps.js:24"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3902099
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 40100500
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "shopping-cart-management;remove-item-from-cart",
+        "keyword": "Scenario",
+        "line": 12,
+        "name": "Remove item from cart",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 86984499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "I am logged in as \"standard_user\"",
+            "match": {
+              "location": "features\\steps\\cart.steps.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 736789499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 13,
+            "name": "I add the \"Sauce Labs Backpack\" to cart",
+            "match": {
+              "location": "features\\steps\\cart.steps.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 28750200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 14,
+            "name": "I remove the \"Sauce Labs Backpack\" from cart",
+            "match": {
+              "location": "features\\steps\\cart.steps.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 66066500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 15,
+            "name": "the cart badge should be empty",
+            "match": {
+              "location": "features\\steps\\cart.steps.js:29"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2687600
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 40015400
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "shopping-cart-management;complete-purchase",
+        "keyword": "Scenario",
+        "line": 17,
+        "name": "Complete purchase",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 90721000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "I am logged in as \"standard_user\"",
+            "match": {
+              "location": "features\\steps\\cart.steps.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 905450600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 18,
+            "name": "I add the \"Sauce Labs Bike Light\" to cart",
+            "match": {
+              "location": "features\\steps\\cart.steps.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 26820600
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "First Name",
+                      "John"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Last Name",
+                      "Doe"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "ZIP Code",
+                      "12345"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "And ",
+            "line": 19,
+            "name": "I proceed to checkout with:",
+            "match": {
+              "location": "features\\steps\\cart.steps.js:34"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 174476699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 23,
+            "name": "I should see order confirmation",
+            "match": {
+              "location": "features\\steps\\cart.steps.js:45"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 9538300
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 39518299
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "shopping-cart-management",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Shopping Cart Management",
+    "tags": [],
+    "uri": "features\\cart.feature"
+  }
+]
