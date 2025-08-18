@@ -4,10 +4,15 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "test": "playwright test --headed --ui"
+    "test": "playwright test --headed",
+    "test:ui": "yarn test:report && yarn test:open",
+    "test:report": "npx allure generate allure-results --clean",
+    "test:open": "npx allure open"
   },
   "devDependencies": {
     "@playwright/test": "^1.54.2",
-    "@types/node": "^24.2.0"
+    "@types/node": "^24.2.0",
+    "allure-commandline": "^2.34.1",
+    "allure-playwright": "^3.3.3"
   }
 }

@@ -1,4 +1,5 @@
 import {test, expect} from '@playwright/test'
+import * as allure from "allure-js-commons";
 import {LoginPage} from '../pages/LoginPage'
 import {InventoryPage} from '../pages/InventoryPage'
 import {BusketPage} from '../pages/BusketPage'
@@ -7,19 +8,33 @@ import {BusketPage} from '../pages/BusketPage'
 // import {CheckoutCompletePage} from '../pages/CheckoutCompletePage'
 
 
-test('Login', async ({page}) => {
+test('Login', {tag: '@login'}, async ({page}) => {
+	await allure.description("My desc");
+    await allure.epic("Mu epic");
+    await allure.feature("My feature");
+    await allure.story("My story");
+    await allure.tags("myTag", "ui", "positive");
+    await allure.issue("My issue");
+    await allure.owner("My owner");
+    await allure.parameter("browser", "chrome");
+
 	const loginPage = new LoginPage(page)
 	const inventoryPage = new InventoryPage(page);
 	const busketPage = new BusketPage(page);
 
-	await loginPage.goto()
-	await loginPage.login('standard_user', 'secret_sauce')
-	await expect(inventoryPage.title).toBeVisible()
+	await allure.step('Enter valid credentials and log in', async () => {
+		await loginPage.goto()
+		await loginPage.login('standard_user', 'secret_sauce')
+		await expect(inventoryPage.title).toBeVisible()
+	})
 
-	await inventoryPage.addItemToCart('Sauce Labs Backpack')
+	await allure.step('Add item to cart and open busket page', async () => {
+		await inventoryPage.addItemToCart('Sauce Labs Backpack')
+		await busketPage.openBusketPage()
+		await expect(busketPage.busketTitle).toHaveText('Your Cart')
+	})
 
-	await busketPage.openBusketPage()
-	await expect(busketPage.busketTitle).toHaveText('Your Cart')
+
 
 	// await checkoutStepOnePage.fillInfo('Ivan', 'Ivanov', '123456')
 	// await checkoutStepOnePage.continue()
